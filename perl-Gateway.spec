@@ -20,7 +20,7 @@ Summary(uk):	Модуль для Perl Gateway
 Summary(zh_CN):	Gateway Perl дё©И
 Name:		perl-Gateway
 Version:	0.42
-Release:	8
+Release:	9
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
