@@ -1,4 +1,4 @@
-%define		perl_sitelib	%(eval "`perl -V:installsitelib`"; echo $installsitelib)
+%include	/usr/lib/rpm/macros.perl
 Summary:	Gateway perl module
 Summary(pl):	Modu³ perla Gateway
 Name:		perl-Gateway
@@ -9,11 +9,11 @@ Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/News/Gateway-%{version}.tar.gz
 Patch:		perl-Gateway-makefile.patch
-BuildRequires:	perl >= 5.005_03-10
+BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	perl >= 5.005_03-14
 BuildRequires:	perl-News-Article
 %requires_eq	perl
 Requires:	%{perl_sitearch}
-Requires:	perl-News-Article
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -36,7 +36,7 @@ install -d $RPM_BUILD_ROOT/usr/src/examples/%{name}-%{version}
 
 make install DESTDIR=$RPM_BUILD_ROOT
 
-install -d examples/* $RPM_BUILD_ROOT/usr/src/examples/%{name}-%{version}
+install examples/* $RPM_BUILD_ROOT/usr/src/examples/%{name}-%{version}
 
 (
   cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/News/Gateway
