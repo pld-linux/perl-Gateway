@@ -1,23 +1,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	News
 %define		pnam	Gateway
-Summary:	Gateway Perl module
-Summary(cs):	Modul Gateway pro Perl
-Summary(da):	Perlmodul Gateway
-Summary(de):	Gateway Perl Modul
-Summary(es):	Módulo de Perl Gateway
-Summary(fr):	Module Perl Gateway
-Summary(it):	Modulo di Perl Gateway
-Summary(ja):	Gateway Perl ¥â¥¸¥å¡¼¥ë
-Summary(ko):	Gateway ÆŞ ¸ğÁÙ
-Summary(nb):	Perlmodul Gateway
-Summary(pl):	Modu³ Perla Gateway
-Summary(pt):	Módulo de Perl Gateway
-Summary(pt_BR):	Módulo Perl Gateway
-Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl Gateway
-Summary(sv):	Gateway Perlmodul
-Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Gateway
-Summary(zh_CN):	Gateway Perl Ä£¿é
+Summary:	Gateway - mail to news, and news to mail gatewaying
+Summary(pl):	Gateway - bramki mail-to-news i news-to-mail
 Name:		perl-Gateway
 Version:	0.42
 Release:	9
@@ -34,10 +19,10 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Gateway - Tools for gatewaying messages between news and mail.
+Gateway conatains tools for gatewaying messages between news and mail.
 
 %description -l pl
-Gateway - narzêdzia do tworzenia bramek news<->mail.
+Gateway zawiera narzêdzia do tworzenia bramek news<->mail.
 
 %prep
 %setup -q -n %{pnam}-%{version}
