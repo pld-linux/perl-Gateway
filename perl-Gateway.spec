@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
-%define		pdir	News
-%define		pnam	Gateway
+%define	pdir	News
+%define	pnam	Gateway
 Summary:	Gateway - mail to news, and news to mail gatewaying
 Summary(pl):	Gateway - bramki mail-to-news i news-to-mail
 Name:		perl-Gateway
