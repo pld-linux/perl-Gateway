@@ -21,7 +21,8 @@ Summary(zh_CN):	Gateway Perl Ä£¿é
 Name:		perl-Gateway
 Version:	0.42
 Release:	9
-License:	GPL
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
 # Source0-md5:	fa623e920b023428f61a2342e27a6431
