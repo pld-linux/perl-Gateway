@@ -1,12 +1,29 @@
 %include	/usr/lib/rpm/macros.perl
-Summary:	Gateway perl module
-Summary(pl):	Modu³ perla Gateway
+%define		pdir	News
+%define		pnam	Gateway
+Summary:	Gateway Perl module
+Summary(cs):	Modul Gateway pro Perl
+Summary(da):	Perlmodul Gateway
+Summary(de):	Gateway Perl Modul
+Summary(es):	Módulo de Perl Gateway
+Summary(fr):	Module Perl Gateway
+Summary(it):	Modulo di Perl Gateway
+Summary(ja):	Gateway Perl ¥â¥¸¥å¡¼¥ë
+Summary(ko):	Gateway ÆÞ ¸ðÁÙ
+Summary(no):	Perlmodul Gateway
+Summary(pl):	Modu³ Perla Gateway
+Summary(pt):	Módulo de Perl Gateway
+Summary(pt_BR):	Módulo Perl Gateway
+Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl Gateway
+Summary(sv):	Gateway Perlmodul
+Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Gateway
+Summary(zh_CN):	Gateway Perl Ä£¿é
 Name:		perl-Gateway
 Version:	0.42
-Release:	7
+Release:	8
 License:	GPL
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/News/Gateway-%{version}.tar.gz
+Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-makefile.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
@@ -21,7 +38,7 @@ Gateway - Tools for gatewaying messages between news and mail.
 Gateway - narzêdzia do tworzenia bramek news<->mail.
 
 %prep
-%setup -q -n Gateway-%{version}
+%setup -q -n %{pnam}-%{version}
 %patch -p0
 
 %build
@@ -36,15 +53,13 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-gzip -9nf ChangeLog README TODO doc/*
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz doc/*
+%doc ChangeLog README TODO doc/*
 %{perl_sitelib}/News/Gateway.pm
-%{perl_sitelib}/auto/News/Gateway
+%{perl_sitelib}/auto/News
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}-%{version}
