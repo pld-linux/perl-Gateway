@@ -1,0 +1,11 @@
+--- Makefile.PL~	Sun Apr 12 13:36:25 1998
++++ Makefile.PL	Sat Oct  9 16:03:50 1999
+@@ -24,7 +24,7 @@
+     NAME         => 'News::Gateway',
+     DISTNAME     => 'Gateway',
+     MAN3PODS     => { 'News/Gateway.pod' =>
+-                      '$(INST_MAN3DIR)/News::Gateway.3' },
++                      '$(INST_MAN3DIR)/News::Gateway.3pm' },
+     PL_FILES     => { 'makepod.PL' => 'News/Gateway.pod',
+                       'makepm.PL'  => 'News/Gateway.pm' },
+     PM           => $modules,
