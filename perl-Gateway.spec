@@ -44,7 +44,7 @@ Gateway - narzêdzia do tworzenia bramek news<->mail.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 
 %install
