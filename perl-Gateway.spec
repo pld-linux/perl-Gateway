@@ -20,12 +20,12 @@ Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Gateway
 Summary(zh_CN):	Gateway Perl Ä£¿é
 Name:		perl-Gateway
 Version:	0.42
-Release:	8
+Release:	9
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-makefile.patch
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl >= 5.6
 BuildRequires:	perl-News-Article
 BuildArch:	noarch
@@ -42,7 +42,8 @@ Gateway - narzêdzia do tworzenia bramek news<->mail.
 %patch -p0
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %install
@@ -59,7 +60,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog README TODO doc/*
-%{perl_sitelib}/News/Gateway.pm
-%{perl_sitelib}/auto/News
+%{perl_vendorlib}/News/Gateway.pm
+%{perl_vendorlib}/auto/News
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}-%{version}
