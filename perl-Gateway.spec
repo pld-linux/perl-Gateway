@@ -5,7 +5,7 @@ Summary:	Gateway - mail to news, and news to mail gatewaying
 Summary(pl):	Gateway - bramki mail-to-news i news-to-mail
 Name:		perl-Gateway
 Version:	0.42
-Release:	9
+Release:	10
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
