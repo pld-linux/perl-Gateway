@@ -3,14 +3,15 @@ Summary:	Gateway perl module
 Summary(pl):	Modu³ perla Gateway
 Name:		perl-Gateway
 Version:	0.42
-Release:	3
+Release:	4
 License:	GPL
 Group:		Development/Languages/Perl
+Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/News/Gateway-%{version}.tar.gz
-Patch0:		perl-Gateway-makefile.patch
+Patch0:		%{name}-makefile.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
-BuildRequires:	perl >= 5.005_03-14
+BuildRequires:	perl >= 5.6
 BuildRequires:	perl-News-Article
 %requires_eq	perl
 Requires:	%{perl_sitearch}
@@ -32,32 +33,21 @@ perl Makefile.PL
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}-%{version}
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-install examples/* $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}-%{version}
+install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-(
-  cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/News/Gateway
-  sed -e "s#$RPM_BUILD_ROOT##" .packlist >.packlist.new
-  mv .packlist.new .packlist
-)
-
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/* \
-        ChangeLog README TODO doc/*
+gzip -9nf ChangeLog README TODO doc/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {ChangeLog,README,TODO}.gz doc/*
-
+%doc *.gz doc/*
 %{perl_sitelib}/News/Gateway.pm
 %{perl_sitelib}/auto/News/Gateway
-%{perl_sitearch}/auto/News/Gateway
-
 %{_mandir}/man3/*
-
-%{_prefix}/src/examples/%{name}-%{version}
+%{_examplesdir}/%{name}-%{version}
