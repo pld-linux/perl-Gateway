@@ -3,7 +3,7 @@ Summary:	Gateway perl module
 Summary(pl):	Modu³ perla Gateway
 Name:		perl-Gateway
 Version:	0.42
-Release:	6
+Release:	7
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/News/Gateway-%{version}.tar.gz
