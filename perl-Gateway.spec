@@ -10,7 +10,7 @@ Summary(fr):	Module Perl Gateway
 Summary(it):	Modulo di Perl Gateway
 Summary(ja):	Gateway Perl ¥â¥¸¥å¡¼¥ë
 Summary(ko):	Gateway ÆÞ ¸ðÁÙ
-Summary(no):	Perlmodul Gateway
+Summary(nb):	Perlmodul Gateway
 Summary(pl):	Modu³ Perla Gateway
 Summary(pt):	Módulo de Perl Gateway
 Summary(pt_BR):	Módulo Perl Gateway
