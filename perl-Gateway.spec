@@ -6,7 +6,7 @@ Version:	0.42
 Release:	7
 License:	GPL
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/News/Gateway-%{version}.tar.gz
+Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/News/Gateway-%{version}.tar.gz
 Patch0:		%{name}-makefile.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
