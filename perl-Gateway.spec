@@ -26,7 +26,7 @@ Gateway zawiera narzêdzia do tworzenia bramek news<->mail.
 
 %prep
 %setup -q -n %{pnam}-%{version}
-%patch -p0
+%patch0 -p0
 
 %build
 %{__perl} Makefile.PL \
