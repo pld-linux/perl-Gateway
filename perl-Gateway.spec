@@ -2,7 +2,7 @@
 %define		pdir	News
 %define		pnam	Gateway
 Summary:	Gateway - mail to news, and news to mail gatewaying
-Summary(pl):	Gateway - bramki mail-to-news i news-to-mail
+Summary(pl.UTF-8):   Gateway - bramki mail-to-news i news-to-mail
 Name:		perl-Gateway
 Version:	0.42
 Release:	10
@@ -21,8 +21,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Gateway conatains tools for gatewaying messages between news and mail.
 
-%description -l pl
-Gateway zawiera narzêdzia do tworzenia bramek news<->mail.
+%description -l pl.UTF-8
+Gateway zawiera narzÄ™dzia do tworzenia bramek news<->mail.
 
 %prep
 %setup -q -n %{pnam}-%{version}
